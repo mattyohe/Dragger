@@ -68,7 +68,6 @@
 {
     CGPoint point = [gesture translationInView:self];
     CGPoint location = [gesture locationInView:self];
-    NSLog(@"%@",NSStringFromCGPoint(point));
     int xmin = CGRectGetMinX(self.bounds);
     int xmax = CGRectGetMaxX(self.bounds) - _dragger.frameSizeWidth;
     
@@ -76,6 +75,8 @@
     
     draggerX = MAX(xmin, draggerX);
     draggerX = MIN(xmax, draggerX);
+    
+    BOOL isAtEnd = (location.x + _dragger.frameSizeWidth/2 >= CGRectGetMaxX(self.bounds)) ? YES : NO;
     
     switch (gesture.state) {
         case UIGestureRecognizerStateBegan:
@@ -89,14 +90,31 @@
         case UIGestureRecognizerStateChanged:
         {
             [_dragger setFrameOriginX:draggerX];
+            if (isAtEnd) {
+                NSLog(@"At End");
+                [gesture setEnabled:NO];
+                [self sendActionsForControlEvents:UIControlEventValueChanged];
+                [_dragger setFrameOriginX:0];
+                [gesture setEnabled:YES];
+            }
         }
             break;
             
         case UIGestureRecognizerStateFailed:
             
+            NSLog(@"Failed");
+            break;
+        case UIGestureRecognizerStateCancelled:
+            NSLog(@"Cancelled");
             break;
             
         case UIGestureRecognizerStateEnded:
+        {
+            [UIView animateWithDuration:0.2 animations:^{
+                [_dragger setFrameOriginX:0];
+            }];
+            
+        }
             
             break;
             

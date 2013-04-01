@@ -21,6 +21,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     WTADragger *drag = [[WTADragger alloc] initWithFrame:CGRectMake(30, 300, 250, 100)];
+    [drag addTarget:self action:@selector(topControl:) forControlEvents:UIControlEventValueChanged];
     [[self view] addSubview:drag];
 }
 
@@ -28,6 +29,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)topControl:(id)sender {
+    
+    NSLog(@"%@",sender);
+    
 }
 
 @end
