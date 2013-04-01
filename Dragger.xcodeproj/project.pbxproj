@@ -18,6 +18,9 @@
 		B5D172ED170A31DF004D2B97 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D172EC170A31DF004D2B97 /* Default-568h@2x.png */; };
 		B5D172F0170A31DF004D2B97 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D172EE170A31DF004D2B97 /* MainStoryboard.storyboard */; };
 		B5D172F3170A31DF004D2B97 /* WTAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D172F2170A31DF004D2B97 /* WTAViewController.m */; };
+		B5D172FB170A31F9004D2B97 /* WTADragger.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D172FA170A31F9004D2B97 /* WTADragger.m */; };
+		B5D172FE170A3606004D2B97 /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D172FD170A3606004D2B97 /* UIView+Helpers.m */; };
+		B5D17300170A36A3004D2B97 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D172FF170A36A3004D2B97 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		B5D172EF170A31DF004D2B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B5D172F1170A31DF004D2B97 /* WTAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTAViewController.h; sourceTree = "<group>"; };
 		B5D172F2170A31DF004D2B97 /* WTAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAViewController.m; sourceTree = "<group>"; };
+		B5D172F9170A31F9004D2B97 /* WTADragger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTADragger.h; sourceTree = "<group>"; };
+		B5D172FA170A31F9004D2B97 /* WTADragger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTADragger.m; sourceTree = "<group>"; };
+		B5D172FC170A3606004D2B97 /* UIView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helpers.h"; sourceTree = "<group>"; };
+		B5D172FD170A3606004D2B97 /* UIView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helpers.m"; sourceTree = "<group>"; };
+		B5D172FF170A36A3004D2B97 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D17300170A36A3004D2B97 /* QuartzCore.framework in Frameworks */,
 				B5D172D7170A31DF004D2B97 /* UIKit.framework in Frameworks */,
 				B5D172D9170A31DF004D2B97 /* Foundation.framework in Frameworks */,
 				B5D172DB170A31DF004D2B97 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +65,7 @@
 		B5D172CA170A31DF004D2B97 = {
 			isa = PBXGroup;
 			children = (
+				B5D172FF170A36A3004D2B97 /* QuartzCore.framework */,
 				B5D172DC170A31DF004D2B97 /* Dragger */,
 				B5D172D5170A31DF004D2B97 /* Frameworks */,
 				B5D172D4170A31DF004D2B97 /* Products */,
@@ -89,6 +99,10 @@
 				B5D172F1170A31DF004D2B97 /* WTAViewController.h */,
 				B5D172F2170A31DF004D2B97 /* WTAViewController.m */,
 				B5D172DD170A31DF004D2B97 /* Supporting Files */,
+				B5D172F9170A31F9004D2B97 /* WTADragger.h */,
+				B5D172FA170A31F9004D2B97 /* WTADragger.m */,
+				B5D172FC170A3606004D2B97 /* UIView+Helpers.h */,
+				B5D172FD170A3606004D2B97 /* UIView+Helpers.m */,
 			);
 			path = Dragger;
 			sourceTree = "<group>";
@@ -177,6 +191,8 @@
 				B5D172E3170A31DF004D2B97 /* main.m in Sources */,
 				B5D172E7170A31DF004D2B97 /* WTAAppDelegate.m in Sources */,
 				B5D172F3170A31DF004D2B97 /* WTAViewController.m in Sources */,
+				B5D172FB170A31F9004D2B97 /* WTADragger.m in Sources */,
+				B5D172FE170A3606004D2B97 /* UIView+Helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

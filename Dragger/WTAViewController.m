@@ -7,6 +7,8 @@
 //
 
 #import "WTAViewController.h"
+#import "WTADragger.h"
+
 
 @interface WTAViewController ()
 
@@ -18,6 +20,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    WTADragger *drag = [[WTADragger alloc] initWithFrame:CGRectMake(30, 300, 250, 100)];
+    [[self view] addSubview:drag];
 }
 
 - (void)didReceiveMemoryWarning
