@@ -66,7 +66,6 @@
 
 -(void)pan:(UIPanGestureRecognizer *)gesture
 {
-    CGPoint point = [gesture translationInView:self];
     CGPoint location = [gesture locationInView:self];
     int xmin = CGRectGetMinX(self.bounds);
     int xmax = CGRectGetMaxX(self.bounds) - _dragger.frameSizeWidth;
